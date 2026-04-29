@@ -4,7 +4,7 @@ A simple web app that predicts shoe sale revenue based on brand, price, units so
 
 ## Live Demo
 
-Open `index.html` in any browser — no installation needed.
+[Demo](https://mohdsaqib19.github.io/Shoe-Sales-Revenue-Predictor/)
 
 ## How it works
 
@@ -49,9 +49,3 @@ README.md       - this file
 
 Just download `index.html` and open it in your browser. That's it.
 
-## How to deploy on GitHub Pages
-
-1. Create a new GitHub repository
-2. Upload `index.html` and `README.md`
-3. Go to Settings → Pages → select `main` branch → Save
-4. Your app will be live at `https://yourusername.github.io/repo-name`
