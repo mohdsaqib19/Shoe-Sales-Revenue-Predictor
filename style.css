@@ -1,0 +1,269 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #f4f6f8;
+    font-family: Georgia, serif;
+    color: #222;
+    padding: 30px 16px 60px;
+  }
+
+  .wrapper {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* header */
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  header h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+  }
+
+  .sub {
+    font-size: 14px;
+    color: #666;
+    font-family: Arial, sans-serif;
+  }
+
+  .badge {
+    display: inline-block;
+    background-color: #e8f0fe;
+    color: #3c4fa8;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+
+  /* card */
+  .card {
+    background: #ffffff;
+    border: 1px solid #dde1e7;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* form grid */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  @media (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .field.full {
+    grid-column: 1 / -1;
+  }
+
+  label {
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: #555;
+  }
+
+  select,
+  input[type="number"] {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #fff;
+    outline: none;
+  }
+
+  select:focus,
+  input[type="number"]:focus {
+    border-color: #3c4fa8;
+  }
+
+  /* slider */
+  .slider-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  input[type="range"] {
+    flex: 1;
+    height: 5px;
+    accent-color: #3c4fa8;
+    cursor: pointer;
+  }
+
+  .range-val {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #3c4fa8;
+    min-width: 24px;
+    text-align: right;
+  }
+
+  /* button */
+  .btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 14px;
+    background-color: #3c4fa8;
+    color: #fff;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #2e3d8a;
+  }
+
+  /* result */
+  #result {
+    display: none;
+    text-align: center;
+    padding: 24px;
+  }
+
+  #result.show {
+    display: block;
+  }
+
+  .result-label {
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: #888;
+    margin-bottom: 8px;
+  }
+
+  .revenue-big {
+    font-size: 52px;
+    font-weight: bold;
+    color: #1d7a3e;
+    line-height: 1.1;
+  }
+
+  .revenue-big span {
+    font-size: 22px;
+    color: #888;
+    vertical-align: super;
+  }
+
+  /* stats row */
+  .breakdown {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .stat {
+    background: #f4f6f8;
+    border: 1px solid #dde1e7;
+    border-radius: 6px;
+    padding: 12px 8px;
+    text-align: center;
+  }
+
+  .stat-val {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #3c4fa8;
+  }
+
+  .stat-key {
+    font-size: 11px;
+    color: #888;
+    font-family: Arial, sans-serif;
+    margin-top: 3px;
+  }
+
+  /* confidence bar */
+  .confidence-bar {
+    margin-top: 18px;
+    background: #f4f6f8;
+    border: 1px solid #dde1e7;
+    border-radius: 6px;
+    padding: 14px 16px;
+    text-align: left;
+  }
+
+  .conf-label {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color: #666;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .conf-label span {
+    color: #1d7a3e;
+    font-weight: bold;
+  }
+
+  .bar-track {
+    height: 8px;
+    background: #dde1e7;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background-color: #3c4fa8;
+    border-radius: 4px;
+    width: 0;
+    transition: width 1s ease;
+  }
+
+  /* footer */
+  .note {
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color: #999;
+    margin-top: 24px;
+    line-height: 1.8;
+  }
+
+  .note a {
+    color: #3c4fa8;
+    text-decoration: none;
+  }
